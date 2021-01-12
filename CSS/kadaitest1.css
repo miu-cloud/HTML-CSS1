@@ -1,0 +1,106 @@
+html{
+  font-size:62.5%;
+  height: 100%;
+}
+body{
+height:100%;
+}
+
+/*ヘッダー*/
+.header{
+  background-color: #F5B4B3;
+  height: 50px;
+  font-size: 1.5rem;
+}
+.logo_image{
+  width: 110px;
+  margin: 0;
+}
+/*画像*/
+.image_area{
+  margin-bottom:0px;
+}
+/*サイド*/
+.side_menu{
+  width: 300px;
+  float: left;
+}
+.side_menu li{
+  background-color: #F5B4B3;
+  height: 6rem;
+  margin-bottom: 10px;
+}
+.side_menu li:hover{
+  opacity: 0.6;
+}
+.side_menu li a{
+  font-size:2rem;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 2rem;
+}
+.side_menu .point{
+  background-color: #FCECEC;
+}
+.side_menu .point a{
+  color: #4D4D4D;
+}
+/*メイン*/
+
+.contact{
+width: 660px;
+}
+.contact tr{
+ height: 7rem;
+
+}
+.contact th{
+  text-align: right;
+  width: 150px;
+}
+.contact td{
+ padding-left: 1rem;
+}
+input[type="text"]{
+width: 480px;
+margin-right: 10px;
+}
+textarea{
+  width: 480px;
+}
+/*送信ボタン*/
+p{
+  text-align: center;
+}
+.botton{
+line-height: 2rem;
+background-color: blue;
+padding:12px 20px;
+font-size:25px;
+color: white;
+}
+.botton:hover{
+opacity: 0.5;
+}
+
+/*フッター*/
+.footer{
+  background-color: #4D4D4D;
+  height: 100px;
+  width: 100%;
+}
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+}
+.wrapper{
+  margin-top: 10px;
+  padding-bottom: 100px;
+}
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align:middle;
+}
