@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DOM操作入門</title>
+</head>
+<body>
+  <form>
+    <input type="text" name="" id="name"/>
+    <input  value="追加" id="btn"/>
+    <h3>TODOリスト</h3>
+    <ul id="lists"></ul>
+    <button type="button" id="deleatButton">削除する</button>
+  </form>
+  <script>
+    const lists = document.getElementById('lists');//ノードの生成
+    const target = document.getElementById('btn');
+    target.addEventListener('click', function() {//定数targetにイベントを設定する `clic`がイベントの発生タイミングを示す　functionがイベントが発生したときに実行する関数
+      const form = document.getElementById('name');//フォームの取得
+      const list = document.createElement('li');//Liタグの生成
+      list.textContent =form.value;//listがノード　フォームの入力内容をliタグのテキストデータに追加 textContent=テキストデータの編集
+      list.addEventListener('click',function(e){//リストにクリックイベントを設定 eにはクリックした際に発生した情報が含まれている
+        const doneList = e.target;
+        doneList.style.textDecoration = 'line-through';//ラインを引く・文字をグレイに・イタリックに
+        doneList.style.color = 'gray';
+        doneList.style.fontStyle = 'italic';
+      },false);
+      lists.appendChild(list);
+      if(form.value == ""){                      //フォーム内容が空白の場合liタグが追加され、アラートでTODOを入力してくださいと表示される
+        window.alert(`TODOを入力してください。`);
+      }
+      else{
+        list.textContent = form.value;
+        list.textContent = form.value;
+        lists.appendChild(list);
+        form.value = "";
+       }
+      },false);
+
+      const deleatButton = document.getElementById(`deleatButton`);//削除ボタンの生成
+      deleatButton.addEventListener('click',function(){//削除ボタンにイベントを設定
+        while(lists.firstChild){
+          lists.removeChild(lists.firstChild);//要素の削除にはremoveChildを使用
+        }                                     //parent:親ノード　node:削除対象のノード
+
+      },false);
+  </script>
+</body>
+
+</html>

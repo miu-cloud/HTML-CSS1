@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery入門</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>項目1</th>
+        <th>項目2</th>
+        <th>項目3</th>
+      </tr>
+      <tr>
+        <td>リスト</td>
+        <td>リスト</td>
+        <td>リスト</td>
+      </tr>
+      <tr>
+        <td>リスト</td>
+        <td>リスト</td>
+        <td>リスト</td>
+      </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+      $(function() {
+        $('table').find('td').data('count', 0)
+        .on('click', function(){
+          let $this = $(this);
+          let number = $this.data('count') + 1;
+          $this
+          .data('count', number)
+          .text(number);
+        });
+      });
+    </script>
+  </body>
+</html>
